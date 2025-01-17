@@ -211,8 +211,8 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
             >
                 {children}
             </span>
-            <FloatingPortal>
-                {isMounted && (
+            {isMounted && (
+                <FloatingPortal>
                     <FloatingFocusManager
                         context={context}
                         modal={false}
@@ -220,8 +220,8 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
                     >
                         {popover}
                     </FloatingFocusManager>
-                )}
-            </FloatingPortal>
+                </FloatingPortal>
+            )}
         </>
     );
 };
